@@ -24,7 +24,7 @@ super + alt + {q,r}
 
 # close and kill
 super + c
-	bspc node -k
+	bspc node -c
 
 # Focus on window in direction
 super + {h,j,k,l}
