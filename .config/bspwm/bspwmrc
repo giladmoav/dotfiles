@@ -8,18 +8,27 @@ run()
     [ $( pgrep $1 | wc -l) -eq "0" ] && exec $* &
 }
 
+setup_polybar()
+{
+    for m in $(xrandr -q | grep " connected" | cut -d" " -f1); do
+        MONITOR=$m polybar -r example &
+    done
+}
+
 run sxhkd
-run polybar example -r &
+killall polybar; setup_polybar
 run redshift-gtk -l 31.8:35.2
 run flameshot
 run albert
-run picom --config /home/gilad/.config/picom.conf
+run picom --config ~/.config/picom.conf
 
 setxkbmap -option grp:caps_toggle us,il &
 
 
 ###---MONITORS---###
-bspc monitor eDP-1 -d 1 2 3 4 5 6 7
+# bspc monitor eDP-1 -d 1 2 3 4 5 6 7
+bspc monitor DP-4 -d 1 2 3 4 5 
+bspc monitor HDMI-0 -d 6 7 8 5 
 
 ###---Global Settings---###
 bspc config automatic_scheme longest_side
