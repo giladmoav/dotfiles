@@ -16,6 +16,7 @@ setup_polybar()
 }
 
 run sxhkd
+feh --bg-fill --randomize /games/wallpapers
 killall polybar; setup_polybar
 run redshift-gtk -l 31.8:35.2
 run flameshot
