@@ -46,7 +46,7 @@ super + y
 super + {t,f}
 	bspc node -t {tiled,fullscreen}
 
-super + control + @space
+super + control + space
     bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
 
 
