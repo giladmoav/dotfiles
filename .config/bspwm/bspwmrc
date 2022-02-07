@@ -5,7 +5,7 @@ bspc rule -r "*"
 
 run()
 {
-    [ $( pgrep $1 | wc -l) -eq "0" ] && exec $* &
+    pgrep $1 || exec $* &
 }
 
 setup_polybar()
@@ -23,13 +23,15 @@ run flameshot
 run albert
 run picom --config ~/.config/picom.conf
 
+
 setxkbmap -option grp:caps_toggle us,il &
 
 
 ###---MONITORS---###
 # bspc monitor eDP-1 -d 1 2 3 4 5 6 7
+bspc monitor -d 0 1 2 3 
 bspc monitor DP-4 -d 1 2 3 4 5 
-bspc monitor HDMI-0 -d 6 7 8 5 
+bspc monitor HDMI-0 -d 6 7 8 9 0
 
 ###---Global Settings---###
 bspc config automatic_scheme longest_side
