@@ -1,0 +1,9 @@
+[global]
+    monitor = 0
+
+    follow = mouse
+
+    padding = 10
+
+    font = Fira Code 12
+
