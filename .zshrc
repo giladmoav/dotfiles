@@ -88,7 +88,7 @@ source ~/.config/zsh/zsh-you-should-use/you-should-use.plugin.zsh
 
 
 
-
+export MANPAGER="nvim +Man!"
 eval "$(starship init zsh)"
 
 
