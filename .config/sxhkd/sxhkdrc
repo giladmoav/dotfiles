@@ -96,3 +96,6 @@ super + {Left,Down,Up,Right}
 
 Print
      flameshot gui
+
+super + b
+     firefox
