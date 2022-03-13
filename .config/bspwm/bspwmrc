@@ -18,10 +18,13 @@ setup_polybar()
 run sxhkd
 feh --bg-fill --randomize /games/wallpapers
 killall polybar; setup_polybar
+run nm-applet
 run redshift-gtk -l 31.8:35.2
 run flameshot
 run albert
 run picom --config ~/.config/picom.conf
+run blueman-applet
+run light-locker --lock-on-suspend
 
 
 setxkbmap -option grp:caps_toggle us,il &

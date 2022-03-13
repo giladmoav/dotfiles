@@ -2,6 +2,7 @@ let mapleader = " "
 " calling Plug
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'vimwiki/vimwiki'
 " easymotion
 Plug 'easymotion/vim-easymotion'
 nmap <Space> <Plug>(easymotion-bd-w)
