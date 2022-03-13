@@ -18,13 +18,17 @@ setup_polybar()
 run sxhkd
 feh --bg-fill --randomize /games/wallpapers
 killall polybar; setup_polybar
-run nm-applet
 run redshift-gtk -l 31.8:35.2
 run flameshot
 run albert
 run picom --config ~/.config/picom.conf
-run blueman-applet
-run light-locker --lock-on-suspend
+# for laptop apps
+if [ "gilad-laptop" = "$(hostname)" ]; then
+    run blueman-applet
+    run nm-applet
+    run light-locker --lock-on-suspend
+fi
+
 
 
 setxkbmap -option grp:caps_toggle us,il &
