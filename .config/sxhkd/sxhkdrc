@@ -7,8 +7,8 @@ super + Return
 	alacritty
 
 # program launcher
-# super + @space
-# 	dmenu_run
+control + space
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -99,3 +99,6 @@ Print
 
 super + b
      firefox
+
+super + Tab
+    rofi -show window
