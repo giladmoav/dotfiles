@@ -20,7 +20,6 @@ feh --bg-fill --randomize /games/wallpapers
 killall polybar; setup_polybar
 run redshift-gtk -l 31.8:35.2
 run flameshot
-run albert
 run picom --config ~/.config/picom.conf
 # for laptop apps
 if [ "gilad-laptop" = "$(hostname)" ]; then
