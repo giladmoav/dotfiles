@@ -102,3 +102,6 @@ super + b
 
 super + Tab
     rofi -show window
+
+XF86AudioPlay
+    playerctl play-pause
